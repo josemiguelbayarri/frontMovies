@@ -7,14 +7,18 @@ import { AppComponent } from './app.component';
 /* import { WelcomeComponent } from './welcome/welcome.component'; */
  import { HeaderComponent } from './components/header/header.component'; 
 import { FilmsListComponent } from './components/films-list/films-list.component';
-import { InfoMoviesComponent } from './components/info-movies/info-movies.component';//importación del componente filmsListComponent co su ruta correspondiente
+import { InfoMoviesComponent } from './components/info-movies/info-movies.component';
+import { IndexComponent } from './components/index/index.component';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';//importación del componente filmsListComponent co su ruta correspondiente
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilmsListComponent,
+    FilmsListComponent,//declaramos filmsListComponent para que se activa en la linea de import
     HeaderComponent,
-    InfoMoviesComponent//declaramos filmsListComponent para que se activa en la linea de import
+    InfoMoviesComponent,
+    IndexComponent,
+    BusquedaComponent
   ],
   imports: [
     BrowserModule,//las declaraciones por defecto de los imports de angular

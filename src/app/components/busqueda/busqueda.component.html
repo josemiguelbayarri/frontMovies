@@ -1,7 +1,6 @@
-<!-- <p>{{titulo}}</p> -->
 <app-header></app-header>
- <div class="movies">
-    <div *ngFor="let pelicula of pelisMostrar">
+<div class="movies">
+    <div *ngFor="let pelicula of MovieService.films">
         <p>{{pelicula.title}}</p>
         <a routerLink="/info" routerLinkActive="active-link">
         <img width="200"height="288" (click)="MovieService.locateFilm(pelicula)"
@@ -10,8 +9,4 @@
         </a>
     </div>
 </div>
- 
 
-<a routerLink="/" routerLinkActive="active-link">
-    <button>Bienvenida</button>    
-</a>
