@@ -32,17 +32,20 @@ export class MovieService {
     return;
  }
 
-
+buscaPeliculasTitulo(titulo:string):Observable<any>{
+  return this.httpClient.get(this.backUrl + 'title/' + titulo);
+}
  
   
 
 setFilms(films:object[]):void{
-      
-    this.films=films
+    
+    this.films=films;
+    console.log(this.films)
 
  }
  
-getFilms():object{
+getFilms():object[]{
     
     return this.films
 
