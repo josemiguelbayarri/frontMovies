@@ -1,6 +1,10 @@
 <app-header></app-header>
-<div class="pelicula">
-    <h3>Titulo: {{movieShow.title}}</h3>
-    <p>Overview: {{movieShow.overview}}</p>
-    <img width="200" height="288" src="https://image.tmdb.org/t/p/w200/{{movieShow.poster_path}}" alt="poster">
+<div class="main-peli">
+    <h3 class="info-titulo">Titulo: {{movieShow.title}}</h3>
+    <div class="info-peli">
+        
+        <p class="info-overview">Overview: {{movieShow.overview}}</p>
+        <img width="200" height="288" src="https://image.tmdb.org/t/p/w200/{{movieShow.poster_path}}" alt="poster">
+    </div>
+    
 </div> 
