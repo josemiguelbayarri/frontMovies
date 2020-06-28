@@ -1,12 +1,14 @@
-<div class="contenedor-general">
-    <div class="buscador">
-        <input type="text" name="" id="" placeholder="hola" (keyup)="buscaTitulo($event)">
-    </div>
-    <div class="buttons">
-        <button id="boton-busqueda-genero">por género</button>
-        <button id="boton-alquiler"> Alquilar </button>
-        <button id="boton-user"> Usuario </button>
-    </div>
-        
+<div class="header">
+    <nav>
+        <ul>
+            <li><a href=""><span class="logo-header"><p>inicio</p></span></a></li>
+            <!-- <li><a routerLink="" routerLinkActive="active-link">inicio</a></li> -->
+            <li><a routerLink="/display" routerLinkActive="active-link">peliculas</a></li>
+            <li><a routerLink="/search" routerLinkActive="active-link">buscador</a></li>
+        </ul>
+        <ul>
+            <li><a routerLink="/login" routerLinkActive="active-link">Login</a></li>
+            <li><a routerLink="/signup" routerLinkActive="active-link">Signup</a></li>
+        </ul>
+    </nav>
 </div>
-

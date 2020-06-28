@@ -7,10 +7,6 @@ import { Observable } from 'rxjs';//importación por defecto de angular
 })
 export class MovieService {
 
-  
-
-  
-
   backUrl='http://localhost:3000/movies/';//la usamos para conectar con nuestro backend a traves de esta url
 
   films: object[];//creamos un objeto de array vacio que las coge todas
@@ -32,10 +28,12 @@ export class MovieService {
     return;
  }
 
-buscaPeliculasTitulo(titulo:string):Observable<any>{//guardamos dentro de esta funcion la url/title mas el titulo de la pelicula
-  return this.httpClient.get(this.backUrl + 'title/' + titulo);
-}
- 
+ //esta funcion es la hija de buscaTitulo que se encuentra en header/header.components.ts
+  buscaPeliculasTitulo(titulo:string):Observable<any>{//guardamos dentro de esta funcion la url/title mas el titulo de la pelicula
+    return this.httpClient.get(this.backUrl + 'title/' + titulo);
+  }
+
+
   
 
 setFilms(films:object[]):void{

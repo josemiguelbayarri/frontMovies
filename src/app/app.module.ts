@@ -9,7 +9,9 @@ import { AppComponent } from './app.component';
 import { FilmsListComponent } from './components/films-list/films-list.component';
 import { InfoMoviesComponent } from './components/info-movies/info-movies.component';
 import { IndexComponent } from './components/index/index.component';
-import { BusquedaComponent } from './components/busqueda/busqueda.component';//importación del componente filmsListComponent co su ruta correspondiente
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';//importación del componente filmsListComponent co su ruta correspondiente
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { BusquedaComponent } from './components/busqueda/busqueda.component';//i
     HeaderComponent,
     InfoMoviesComponent,
     IndexComponent,
-    BusquedaComponent
+    BusquedaComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,//las declaraciones por defecto de los imports de angular

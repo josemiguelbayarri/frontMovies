@@ -1,4 +1,7 @@
 <app-header></app-header><!-- el buscador de peliculas que colocaremos donde nos gustevporque esta etiqueta hace referancia al html de header -->
+<div class="buscador">
+    <input type="text" name="" id="" placeholder="hola" (keyup)="buscaTitulo($event)">
+</div>
 <div class="movies">
     <div *ngFor="let pelicula of MovieService.films">
         <p>{{pelicula.title}}</p>
@@ -9,4 +12,6 @@
         </a>
     </div>
 </div>
+
+
 

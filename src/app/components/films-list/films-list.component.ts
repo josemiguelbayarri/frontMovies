@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';//importamos la variable compo
 import { MovieService } from '../../service/movie.service';//importación del servicio movieservice siguiendo la ruta de carpetas y archivos
 
 @Component({
-  selector: 'app-films-list',
+  selector: 'app-films-list',//es el seleccotr de todo este componente
   templateUrl: './films-list.component.html',//conexion con el html de este componente
   styleUrls: ['./films-list.component.scss']//conexion con el css de este componente
 })
