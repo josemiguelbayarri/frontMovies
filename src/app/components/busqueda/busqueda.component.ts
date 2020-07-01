@@ -29,4 +29,11 @@ export class BusquedaComponent implements OnInit {
     }
   }
 
+  buscaId(event){//en esta funcion guardamos lo que tecleamos por el input referenciado con el titulo y la url de la pelicula para compararlos
+    if(event.target.value){//le decimos que se active cuando hayamos tecleado tres o mas teclas
+      this.MovieService.buscaPeliculasId(event.target.value).subscribe(res=>console.log(res))
+      
+    }
+  }
+
 }

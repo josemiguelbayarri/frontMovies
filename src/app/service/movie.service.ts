@@ -24,6 +24,10 @@ export class MovieService {
     this.filmChoosen = filmChoose;
     console.log(this.filmChoosen);
     
+    //ademas de ello, voy a guardar en localStorage la pelicula esscogida.
+    
+    localStorage.setItem("peliEscogida", JSON.stringify(this.filmChoosen));
+    localStorage.setItem("bootcamp")
     
     return;
  }
@@ -33,7 +37,9 @@ export class MovieService {
     return this.httpClient.get(this.backUrl + 'title/' + titulo);
   }
 
-
+  buscaPeliculasId(id:number):Observable<any>{//guardamos dentro de esta funcion la url/title mas el titulo de la pelicula
+    return this.httpClient.get(this.backUrl + 'id/' + id);
+  }
   
 
 setFilms(films:object[]):void{

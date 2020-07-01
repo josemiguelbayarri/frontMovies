@@ -13,7 +13,7 @@ export class InfoMoviesComponent implements OnInit {
   constructor(private MovieService:MovieService) { }
 
   ngOnInit() {
-
+    //en el siguiente ejemplo asignamos a la variable local 
     this.movieShow = this.MovieService.filmChoosen;
 
   }
