@@ -1,3 +1,10 @@
-<div class="guestZone">
-    <span onclick="showLogin()">Login</span>
-</div>
+<app-header></app-header>
+<form class="loginForm" #loginForm="ngForm" (submit)="login(loginForm)">
+    <div class="form-group">
+        <input type="email" email required class="form-control" id="exampleInputEmail1" name="email" ngModel placeholder="Introduce your email" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+        <input type="password" name="password" ngModel class="form-control" required placeholder="Introduce your password" id="exampleInputPassword1">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>

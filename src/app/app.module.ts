@@ -12,6 +12,7 @@ import { IndexComponent } from './components/index/index.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';//importación del componente filmsListComponent co su ruta correspondiente
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SignupComponent } from './components/signup/signup.component';//importa
   imports: [
     BrowserModule,//las declaraciones por defecto de los imports de angular
     AppRoutingModule,//las declaraciones por defecto de los imports de angular
-    HttpClientModule//las declaraciones por defecto de los imports de angular
+    HttpClientModule,//las declaraciones por defecto de los imports de angular
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

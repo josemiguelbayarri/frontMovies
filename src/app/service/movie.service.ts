@@ -26,8 +26,7 @@ export class MovieService {
     
     //ademas de ello, voy a guardar en localStorage la pelicula esscogida.
     
-    localStorage.setItem("peliEscogida", JSON.stringify(this.filmChoosen));
-    localStorage.setItem("bootcamp")
+   
     
     return;
  }
