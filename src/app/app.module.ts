@@ -14,6 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';//importación del componente filmsListComponent co su ruta correspondiente
 import { FormsModule } from '@angular/forms';
 import { MovieModalComponent } from './components/movie-modal/movie-modal.component';
+import { RentComponent } from './components/rent/rent.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MovieModalComponent } from './components/movie-modal/movie-modal.compon
     BusquedaComponent,
     LoginComponent,
     SignupComponent, 
-    MovieModalComponent
+    MovieModalComponent, 
+    RentComponent
   ],
   imports: [
     BrowserModule,//las declaraciones por defecto de los imports de angular

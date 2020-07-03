@@ -21,4 +21,7 @@ export class MovieModalComponent implements OnInit {
     this.closed.emit(true);
     console.log(this.showModal);
   }
+  alquilarPelicula(hola: string){
+    console.log("he pulsado alquilar pelicula", hola);
+  }
 }

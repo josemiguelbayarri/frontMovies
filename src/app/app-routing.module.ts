@@ -6,6 +6,7 @@ import { IndexComponent } from './components/index/index.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
+import { RentComponent } from './components/rent/rent.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:"", component:IndexComponent},
   {path:"search", component:BusquedaComponent},
   {path:"signup", component:SignupComponent},
-  {path:"login", component:LoginComponent}
+  {path:"login", component:LoginComponent},
+  {path:"rent", component:RentComponent}
 
 
 ];

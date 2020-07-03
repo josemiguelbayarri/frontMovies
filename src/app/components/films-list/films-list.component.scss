@@ -2,15 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
-    margin-top: 20px;
+    margin-top: 40px;
     justify-content: center;
-    background: #000428;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #004e92, #000428);
 }
 
 .peliculas {
     display: block;
-    margin-top: 20px;
-    
+    margin-top: 10px;
+    img{
+        height: 250px;
+        margin-right: 10px;
+    }
 }
+

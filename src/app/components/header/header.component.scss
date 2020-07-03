@@ -4,9 +4,7 @@
     margin-bottom: 20px;
     border: none;
     margin: 0 auto;
-    background: #000428;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #004e92, #000428);
+    background-color: #000;
     text-transform: uppercase;
 }
     
@@ -23,9 +21,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: #000428;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #004e92, #000428);
+    background-color: #000;
   }
   li {
     float: left;

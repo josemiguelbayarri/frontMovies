@@ -1,20 +1,21 @@
 <div class="header">
     <nav>
         <ul>
-            <li><a href=""><span class="logo-header"><p>inicio</p></span></a></li>
+            <li><a href="#"><span class="logo-header"><p>inicio</p></span></a></li>
             <!-- <li><a routerLink="" routerLinkActive="active-link">inicio</a></li> -->
             <li><a routerLink="/display" routerLinkActive="active-link">peliculas</a></li>
             <li><a routerLink="/search" routerLinkActive="active-link">buscador</a></li>
         </ul>
-        <!-- <ul>
-            <li><a routerLink="/login" routerLinkActive="active-link">Login</a></li>
-            <li><a routerLink="/signup" routerLinkActive="active-link">Signup</a></li>
-        </ul> -->
+        <ul>
+            <!-- <li><a routerLink="/login" routerLinkActive="active-link">Login</a></li>
+            <li><a routerLink="/signup" routerLinkActive="active-link">Signup</a></li> -->
+            <div class="guestZone" *ngIf="!getUser()">
+                <li><a routerLink="/login" routerLinkActive="active-link">Login</a></li>
+                <li><a routerLink="/signup" routerLinkActive="active-link">Signup</a></li>
+            </div>
+        </ul> 
     </nav>
-    <div class="guestZone" *ngIf="!getUser()">
-        <li><a routerLink="/login" routerLinkActive="active-link">Login</a></li>
-        <li><a routerLink="/signup" routerLinkActive="active-link">Signup</a></li>
-    </div>
+    
     <div class="userZone" *ngIf="getUser() as user">
         <li><a routerLink="/profile" routerLinkActive="active-link">{{user.name || user.email}}</a></li>
         <li><a (click)="logout()" routerLinkActive="active-link">Logout</a></li>
