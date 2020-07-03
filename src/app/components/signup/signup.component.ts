@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserService } from '../../service/user.service';
 import { User } from '../../models/user.model';
-/* import { HttpResponse } from '@angular/common/http'; */
-/* import { Login } from 'src/app/interfaces/login'; */
+import { HttpResponse } from '@angular/common/http';
+import { Login } from 'src/app/interfaces/login';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -21,6 +21,8 @@ export class SignupComponent {
     }
     const user: User = registerForm.value;
     this.userService.register(user)
-      .subscribe(console.log);
+      .subscribe(res => {
+        console.log;
+      });
   }
 }

@@ -1,13 +1,12 @@
 <app-header></app-header>
 <app-movie-modal *ngIf="showModal" [showModal]="showModal" (closed)="closeMovieModalDetail()" [movie]="currentMovie"></app-movie-modal>
- <div class="movies"><!-- es un molde contenedor para pintar todas las pelis que van saliendo de la base de datos -->
+<div class="movies"><!-- es un molde contenedor para pintar todas las pelis que van saliendo de la base de datos -->
     <div class="peliculas" *ngFor="let pelicula of pelisMostrar"><!-- cogemos el objeto pelismostrar y le damoos etiquetad html para mostrarlo -->
         <!-- <p class="movie-title">{{pelicula.title}}</p>referencia a la variable de los titulos de las peliculas para que se ponga el que correspona -->
        <!-- link que lleva a la descripcion de la pelicula -->
         <img width="200"height="288" (click)="showMovieModalDetail(pelicula)"
             src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" 
             alt="poster">
-        
     </div>
 </div>
 
