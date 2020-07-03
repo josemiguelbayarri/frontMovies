@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';//importamos la variable component y oninit que son default de angular
 import { MovieService } from '../../service/movie.service';//importación del servicio movieservice siguiendo la ruta de carpetas y archivos
+import { Movie } from 'src/app/models/movie.model';
 
 @Component({
   selector: 'app-films-list',//es el seleccotr de todo este componente
@@ -8,7 +9,8 @@ import { MovieService } from '../../service/movie.service';//importación del se
 })
 export class FilmsListComponent implements OnInit {
 
-
+  showModal: boolean;
+  currentMovie: Movie;
   pelisMostrar: object;//creamos el objeto pelismostrar con la intencion de meter algo dentro
 
   constructor(public MovieService:MovieService) { }//hacemos referencia la archivo del service movieservice
@@ -21,5 +23,11 @@ export class FilmsListComponent implements OnInit {
       () => console.log(this.pelisMostrar)
     )
   }
-
+  showMovieModalDetail(movie: Movie): void {
+    this.showModal = true;
+    this.currentMovie = movie;
+  }  
+  closeMovieModalDetail(): void {
+    this.showModal = false;
+  }
 }

@@ -13,6 +13,7 @@ import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';//importación del componente filmsListComponent co su ruta correspondiente
 import { FormsModule } from '@angular/forms';
+import { MovieModalComponent } from './components/movie-modal/movie-modal.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     IndexComponent,
     BusquedaComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent, 
+    MovieModalComponent
   ],
   imports: [
     BrowserModule,//las declaraciones por defecto de los imports de angular

@@ -1,7 +1,7 @@
 <div class="contenedor">
     <div class="overlay" id="overlay" [ngClass]="{active: showModal}"><!-- le pasamos el parametro ngClass para activar el modaly mostrarlo -->
         <div class="popup" id="popup" [ngClass]="{active: showModal}"><!-- le pasamos el parametro ngClass para activar el modaly mostrarlo -->
-            <a href="#" id="btn-cerrar-popup" (click)="closeModal()" class="btn-cerrar-popup"><i class="fas-fa-times"></i></a><!-- con un evento click le pasamos el parametro para cerrar el modal a la x -->
+            <p  id="btn-cerrar-popup" (click)="closeModal()" class="btn-cerrar-popup">x</p><!-- con un evento click le pasamos el parametro para cerrar el modal a la x -->
             <h3>{{movie.title}}</h3><!-- pintamos el titulo de cada peli mediante el printado -->
             <img src="https://image.tmdb.org/t/p/w185/{{movie.poster_path}}" alt=""><!-- añadimos la imagen de la peli mediante el printado -->
             <p>{{movie.overview}}</p><!-- añadimos la sinopsis de la peli mediante el printado -->
