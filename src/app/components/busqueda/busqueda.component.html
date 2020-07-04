@@ -1,18 +1,15 @@
 <app-header></app-header><!-- el buscador de peliculas que colocaremos donde nos gustevporque esta etiqueta hace referancia al html de header -->
+<h2 class="titulo-busqueda">Introduce el título de tu película favorita</h2>
 <div class="buscador">
-    <input type="text" name="" id="" placeholder="hola" (keyup)="buscaTitulo($event)">
+    <input type="text" name="" id="" placeholder="INTRODUCE TU PELÍCULA" (keyup)="buscaTitulo($event)">
 </div>
-<div class="buscador">
-    <input type="text" name="" id="" placeholder="hola" (onclick)="buscaId($event)">
-</div>
+
+<app-movie-modal *ngIf="showModal" [showModal]="showModal" (closed)="closeMovieModalDetail()" [movie]="currentMovie"></app-movie-modal>
 <div class="movies">
-    <div *ngFor="let pelicula of MovieService.films">
-        <p>{{pelicula.title}}</p>
-        <a routerLink="/info" routerLinkActive="active-link">
-        <img width="200"height="288" (click)="MovieService.locateFilm(pelicula)"
+    <div class="peliculas" *ngFor="let pelicula of MovieService.films">
+        <img width="200"height="288" (click)="showMovieModalDetail(pelicula)"
             src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" 
             alt="poster">
-        </a>
     </div>
 </div>
 

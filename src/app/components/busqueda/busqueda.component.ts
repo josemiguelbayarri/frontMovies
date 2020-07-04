@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../../service/movie.service';//importación del servicio movieservice siguiendo la ruta de carpetas y archivos
+import { Movie } from 'src/app/models/movie.model';
 
 @Component({
   selector: 'app-busqueda',
@@ -8,7 +9,8 @@ import { MovieService } from '../../service/movie.service';//importación del se
 })
 export class BusquedaComponent implements OnInit {
 
-
+  showModal: boolean;
+  currentMovie: Movie;
   pelisMostrar: object;
 
   constructor(public MovieService:MovieService) { }
@@ -34,6 +36,13 @@ export class BusquedaComponent implements OnInit {
       this.MovieService.buscaPeliculasId(event.target.value).subscribe(res=>console.log(res))
       
     }
+  }
+  showMovieModalDetail(movie: Movie): void {
+    this.showModal = true;
+    this.currentMovie = movie;
+  }  
+  closeMovieModalDetail(): void {
+    this.showModal = false;
   }
 
 }

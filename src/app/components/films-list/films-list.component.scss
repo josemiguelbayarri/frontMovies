@@ -6,12 +6,19 @@
     justify-content: center;
 }
 
+
 .peliculas {
     display: block;
     margin-top: 10px;
     img{
+        padding: 10px;
         height: 250px;
         margin-right: 10px;
+        transition: 1s ease all;
+        cursor: pointer;
+        &:hover {
+            background-color: red;
+        }
     }
 }
 

@@ -1,0 +1,36 @@
+.buscador {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.titulo-busqueda {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.peliculas {
+    display: block;
+    margin-top: 10px;
+    img{
+        padding: 10px;
+        height: 250px;
+        margin-right: 10px;
+        transition: 1s ease all;
+        cursor: pointer;
+        &:hover {
+            background-color: red;
+        }
+    }
+}
+

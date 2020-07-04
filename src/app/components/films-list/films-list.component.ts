@@ -30,4 +30,5 @@ export class FilmsListComponent implements OnInit {
   closeMovieModalDetail(): void {
     this.showModal = false;
   }
+  
 }

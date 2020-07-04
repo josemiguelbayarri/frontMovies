@@ -15,6 +15,8 @@ import { SignupComponent } from './components/signup/signup.component';//importa
 import { FormsModule } from '@angular/forms';
 import { MovieModalComponent } from './components/movie-modal/movie-modal.component';
 import { RentComponent } from './components/rent/rent.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbdModalContent, NgbdModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -27,15 +29,22 @@ import { RentComponent } from './components/rent/rent.component';
     LoginComponent,
     SignupComponent, 
     MovieModalComponent, 
-    RentComponent
+    RentComponent, 
+    NgbdModalContent,
+    NgbdModalComponent
+  
+    
   ],
   imports: [
-    BrowserModule,//las declaraciones por defecto de los imports de angular
-    AppRoutingModule,//las declaraciones por defecto de los imports de angular
-    HttpClientModule,//las declaraciones por defecto de los imports de angular
-    FormsModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    NgbModule
   ],
+  exports: [NgbdModalComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [NgbdModalContent]
 })
 export class AppModule { }

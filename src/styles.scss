@@ -5,12 +5,13 @@
 }
 
 body {
-    background: rgba(76,76,76,1);
-    background: -moz-linear-gradient(-45deg, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(71,71,71,1) 23%, rgba(102,102,102,1) 25%, rgba(58,58,58,1) 43%, rgba(17,17,17,1) 60%, rgba(44,44,44,1) 68%, rgba(43,43,43,1) 76%, rgba(0,0,0,1) 81%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(76,76,76,1)), color-stop(12%, rgba(89,89,89,1)), color-stop(23%, rgba(71,71,71,1)), color-stop(25%, rgba(102,102,102,1)), color-stop(43%, rgba(58,58,58,1)), color-stop(60%, rgba(17,17,17,1)), color-stop(68%, rgba(44,44,44,1)), color-stop(76%, rgba(43,43,43,1)), color-stop(81%, rgba(0,0,0,1)));
-    background: -webkit-linear-gradient(-45deg, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(71,71,71,1) 23%, rgba(102,102,102,1) 25%, rgba(58,58,58,1) 43%, rgba(17,17,17,1) 60%, rgba(44,44,44,1) 68%, rgba(43,43,43,1) 76%, rgba(0,0,0,1) 81%);
-    background: -o-linear-gradient(-45deg, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(71,71,71,1) 23%, rgba(102,102,102,1) 25%, rgba(58,58,58,1) 43%, rgba(17,17,17,1) 60%, rgba(44,44,44,1) 68%, rgba(43,43,43,1) 76%, rgba(0,0,0,1) 81%);
-    background: -ms-linear-gradient(-45deg, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(71,71,71,1) 23%, rgba(102,102,102,1) 25%, rgba(58,58,58,1) 43%, rgba(17,17,17,1) 60%, rgba(44,44,44,1) 68%, rgba(43,43,43,1) 76%, rgba(0,0,0,1) 81%);
+    
+    background-repeat: no-repeat;
     background: linear-gradient(135deg, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(71,71,71,1) 23%, rgba(102,102,102,1) 25%, rgba(58,58,58,1) 43%, rgba(17,17,17,1) 60%, rgba(44,44,44,1) 68%, rgba(43,43,43,1) 76%, rgba(0,0,0,1) 81%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#000000', GradientType=1 );
 }
+ 
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
