@@ -17,6 +17,8 @@ import { MovieModalComponent } from './components/movie-modal/movie-modal.compon
 import { RentComponent } from './components/rent/rent.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdModalContent, NgbdModalComponent } from './components/modal/modal.component';
+import { PopularityComponent } from './components/popularity/popularity.component';
+import { LatestComponent } from './components/latest/latest.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { NgbdModalContent, NgbdModalComponent } from './components/modal/modal.c
     MovieModalComponent, 
     RentComponent, 
     NgbdModalContent,
-    NgbdModalComponent
+    NgbdModalComponent,
+    PopularityComponent,
+    LatestComponent
   
     
   ],

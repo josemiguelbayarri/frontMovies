@@ -7,6 +7,8 @@ import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { RentComponent } from './components/rent/rent.component';
+import { LatestComponent } from './components/latest/latest.component';
+import { PopularityComponent } from './components/popularity/popularity.component';
 
 
 const routes: Routes = [
@@ -16,7 +18,9 @@ const routes: Routes = [
   {path:"search", component:BusquedaComponent},
   {path:"signup", component:SignupComponent},
   {path:"login", component:LoginComponent},
-  {path:"rent", component:RentComponent}
+  {path:"rent", component:RentComponent},
+  {path:"latest", component:LatestComponent},
+  {path:"popularity", component:PopularityComponent}
 
 
 ];

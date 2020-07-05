@@ -1,0 +1,12 @@
+<app-header></app-header>
+<div class="fondo">
+    <app-movie-modal *ngIf="showModal" [showModal]="showModal" (closed)="closeMovieModalDetail()" [movie]="currentMovie"></app-movie-modal>
+    <h3 class="titulo-populares">Más populares</h3>
+    <div class="movies">
+        <div class="peliculas" *ngFor="let pelicula of pelisMostrar">
+            <img width="200"height="288" (click)="showMovieModalDetail(pelicula)"
+                        src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" 
+                        alt="poster">
+        </div>
+    </div>
+</div>

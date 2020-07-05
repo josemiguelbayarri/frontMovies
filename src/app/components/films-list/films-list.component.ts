@@ -8,7 +8,7 @@ import { Movie } from 'src/app/models/movie.model';
   styleUrls: ['./films-list.component.scss']//conexion con el css de este componente
 })
 export class FilmsListComponent implements OnInit {
-
+  page = 1;
   showModal: boolean;
   currentMovie: Movie;
   pelisMostrar: object;//creamos el objeto pelismostrar con la intencion de meter algo dentro
@@ -22,6 +22,7 @@ export class FilmsListComponent implements OnInit {
       error => console.error(error),
       () => console.log(this.pelisMostrar)
     )
+    this.getByPage();
   }
   showMovieModalDetail(movie: Movie): void {
     this.showModal = true;
@@ -29,6 +30,16 @@ export class FilmsListComponent implements OnInit {
   }  
   closeMovieModalDetail(): void {
     this.showModal = false;
+  }
+  getByPage() {
+    this.MovieService.getByPage(this.page)
+      .subscribe(pelisMostrar => {
+        this.MovieService.setFilms(pelisMostrar);
+      });
+  }
+  nextPage(): void {
+    this.page++;
+    this.getByPage();
   }
   
 }

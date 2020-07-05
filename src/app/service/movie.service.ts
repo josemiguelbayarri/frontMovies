@@ -39,8 +39,18 @@ export class MovieService {
   buscaPeliculasId(id:number):Observable<any>{//guardamos dentro de esta funcion la url/title mas el titulo de la pelicula
     return this.httpClient.get(this.backUrl + 'id/' + id);
   }
-  
+  lastMovies():Observable<any> {
+    return this.httpClient.get(this.backUrl + 'lastmovies/');
+  }
 
+  mostPopular():Observable<any> {
+    return this.httpClient.get(this.backUrl + 'mostpopular/');
+  }
+  getByPage(page: number): Observable<any> {
+    // const headers = new HttpHeaders();
+    // headers.set('authorization', localStorage.getItem('authToken'));
+    return this.httpClient.get<any>(this.backUrl + 'page/' + page);
+  }
 setFilms(films:object[]):void{
     
     this.films=films;
@@ -53,6 +63,7 @@ getFilms():object[]{
     return this.films
 
  }
+
 }
 
 
