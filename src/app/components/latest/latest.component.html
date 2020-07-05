@@ -1,10 +1,14 @@
 <app-header></app-header>
 <div class="fondo">
     <app-movie-modal *ngIf="showModal" [showModal]="showModal" (closed)="closeMovieModalDetail()" [movie]="currentMovie"></app-movie-modal>
-    <h3 class="titulo-ultimas">Últimas películas</h3>
+    <h4 class="titulo-ultimas">Últimas películas</h4>
+    <div class="pagination">
+        <button class="pageButton" (click)="backPage()"> ⋘ </button> <span class="num">{{page}}</span>
+        <button class="pageButton" (click)="nextPage()">⋙</button>
+    </div>
     <div class="movies">
         <div class="peliculas" *ngFor="let pelicula of pelisMostrar">
-            <img width="200"height="288" (click)="showMovieModalDetail(pelicula)"
+            <img width="200"height="270" (click)="showMovieModalDetail(pelicula)"
                         src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" 
                         alt="poster">
         </div>
