@@ -1,9 +1,11 @@
-# FrontMovies
+# Angular FrontMovies
+This is a platform to rent and watch movies
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+
+## Information
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.,    Node.js, Sequelize and express.
 
 ## Development server
-
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding

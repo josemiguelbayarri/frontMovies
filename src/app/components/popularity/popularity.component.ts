@@ -9,17 +9,13 @@ import { Movie } from 'src/app/models/movie.model';
   styleUrls: ['./popularity.component.scss']
 })
 export class PopularityComponent implements OnInit {
+  page = 1;
   showModal: boolean;
   currentMovie: Movie;
   pelisMostrar:object;
   constructor(public MovieService:MovieService) { }
   ngOnInit(){
-    this.MovieService.mostPopular()
-    .subscribe(
-      res => this.pelisMostrar = res,
-      error => console.log(error),
-      () => console.log(this.pelisMostrar)
-    )
+    this.getByPage()
   }
   showMovieModalDetail(movie: Movie): void {
     this.showModal = true;
@@ -28,4 +24,23 @@ export class PopularityComponent implements OnInit {
   closeMovieModalDetail(): void {
     this.showModal = false;
   }
+  getMovies(): Movie[] {
+    return this.MovieService.getFilms();
+  }
+  getByPage(): void {
+    this.MovieService.getByPage(this.page)
+    .subscribe(movies => {
+      this.pelisMostrar = movies;
+    })
+  }
+  nextPage() {
+    this.page++;
+    this.getByPage();
+  }
+  backPage():void {
+      if(this.page > 1){
+      this.page--;
+      this.getByPage();
+      }
+    }
 }
