@@ -19,8 +19,7 @@ export class RentComponent implements OnInit {
   ngOnInit(): void {
   }
    
-  createOrder(): void {//rentForm: NgForm
-    this.localUser = JSON.parse(localStorage.getItem('user'));
+  createOrder(orderForm: NgForm): void {//rentForm: NgForm
     console.log(this.localUser)
     /* const recap: Recap = rentForm.value
     this.orderService.createOrder(Recap)

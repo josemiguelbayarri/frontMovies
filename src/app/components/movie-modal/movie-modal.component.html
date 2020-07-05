@@ -2,11 +2,13 @@
     <div class="overlay" id="overlay" [ngClass]="{active: showModal}"><!-- le pasamos el parametro ngClass para activar el modaly mostrarlo -->
         <div class="popup" id="popup" [ngClass]="{active: showModal}"><!-- le pasamos el parametro ngClass para activar el modaly mostrarlo -->
             <p  id="btn-cerrar-popup" (click)="closeModal()" class="btn-cerrar-popup">x</p><!-- con un evento click le pasamos el parametro para cerrar el modal a la x -->
-            <h3>{{movie.title}}</h3><!-- pintamos el titulo de cada peli mediante el printado -->
-            <img src="https://image.tmdb.org/t/p/w185/{{movie.poster_path}}" alt=""><!-- añadimos la imagen de la peli mediante el printado -->
-            <p>{{movie.overview}}</p><!-- añadimos la sinopsis de la peli mediante el printado -->
+            <h3 class="title">{{movie.title}}</h3><!-- pintamos el titulo de cada peli mediante el printado -->
+            <div class="caja-modal">
+                <img src="https://image.tmdb.org/t/p/w185/{{movie.poster_path}}" alt=""><!-- añadimos la imagen de la peli mediante el printado -->
+                <p>{{movie.overview}}</p><!-- añadimos la sinopsis de la peli mediante el printado -->
+            </div>
             <form action="">
-                <a href="/rent">Alquiler</a>
+                <a class="boton_personalizado" href="/rent">Alquiler</a>
             </form>
         </div>
     </div>
