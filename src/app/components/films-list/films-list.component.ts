@@ -11,18 +11,14 @@ export class FilmsListComponent implements OnInit {
   page = 1;
   showModal: boolean;
   currentMovie: Movie;
-  pelisMostrar: object;//creamos el objeto pelismostrar con la intencion de meter algo dentro
+  pelisMostrar: Movie[];//creamos el objeto pelismostrar con la intencion de meter algo dentro
 
   constructor(public MovieService:MovieService) { }//hacemos referencia la archivo del service movieservice
 
-  ngOnInit() {//cuando se active gracias a oninit apliucamos la logico dentro de los siguientes parentesis
-    this.MovieService.getMovies()//hace referencia a la funcion get movies que esta programada en movieservice
-    .subscribe(
-      res => this.pelisMostrar = res,//manda como respuesta el objeto pelisMostrar lleno con lo que fluye de getMovies y pasamos pelimostrar al ngfor del html que lo divide en raciones
-      error => console.error(error),
-      () => console.log(this.pelisMostrar)
-    )
-    this.getByPage();
+  ngOnInit(): void {//cuando se active gracias a oninit apliucamos la logico dentro de los siguientes parentesis
+    
+      this.getByPage()
+    
   }
   showMovieModalDetail(movie: Movie): void {
     this.showModal = true;
@@ -31,15 +27,23 @@ export class FilmsListComponent implements OnInit {
   closeMovieModalDetail(): void {
     this.showModal = false;
   }
-  getByPage() {
-    this.MovieService.getByPage(this.page)
-      .subscribe(pelisMostrar => {
-        this.MovieService.setFilms(pelisMostrar);
-      });
+  getMovies(): Movie[] {
+    return this.MovieService.getFilms();
   }
-  nextPage(): void {
+  getByPage(): void {
+    this.MovieService.getByPage(this.page)
+    .subscribe(movies => {
+      this.pelisMostrar = movies;
+    })
+  }
+  nextPage() {
     this.page++;
     this.getByPage();
   }
-  
+  backPage():void {
+      if(this.page > 1){
+      this.page--;
+      this.getByPage();
+      }
+    }
 }

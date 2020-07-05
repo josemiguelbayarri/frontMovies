@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';//importación por defecto de angular
 import { HttpClient } from '@angular/common/http';//importación por defecto de angular
 import { Observable } from 'rxjs';//importación por defecto de angular
-
+import { Movie } from 'src/app/models/movie.model';
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
 
   backUrl='http://localhost:3000/movies/';//la usamos para conectar con nuestro backend a traves de esta url
-
-  films: object[];//creamos un objeto de array vacio que las coge todas
+  public films: Movie[] = []
+  /* films: object[];//creamos un objeto de array vacio que las coge todas */
   filmChoosen: object[];//creamos un objeto de array vacio que son las que elegimos
   //title: string;
 
@@ -46,19 +46,19 @@ export class MovieService {
   mostPopular():Observable<any> {
     return this.httpClient.get(this.backUrl + 'mostpopular/');
   }
-  getByPage(page: number): Observable<any> {
+  getByPage(page: number): Observable<Movie[]> {
     // const headers = new HttpHeaders();
     // headers.set('authorization', localStorage.getItem('authToken'));
-    return this.httpClient.get<any>(this.backUrl + 'page/' + page);
+    return this.httpClient.get<Movie[]>(this.backUrl + 'page/' + page);
   }
-setFilms(films:object[]):void{
+setFilms(films:Movie[]):void{
     
     this.films=films;
     console.log(this.films)
 
  }
  
-getFilms():object[]{
+getFilms():Movie[]{
     
     return this.films
 

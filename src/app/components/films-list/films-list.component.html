@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="fondo">
     <div class="pagination">
-        <button class="pageButton">Previous page</button> {{page}}
+        <button class="pageButton" (click)="backPage()">Previous page</button> {{page}}
         <button class="pageButton" (click)="nextPage()">Next page</button>
     </div>
     <app-movie-modal  *ngIf="showModal" [showModal]="showModal" (closed)="closeMovieModalDetail()" [movie]="currentMovie"></app-movie-modal>
